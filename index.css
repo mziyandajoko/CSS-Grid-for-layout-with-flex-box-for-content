@@ -73,7 +73,7 @@ body, html{
 
 .menu ul li:nth-of-type(1){
     padding:  2rem 0;
-    border-bottom: 1px solid var(--grey-text-color);
+    /* border-bottom: 1px solid var(--grey-text-color); */
 }
 
 .menu ul li:nth-of-type(9){
