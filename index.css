@@ -4,6 +4,7 @@
     --secondary-button-color: #f98;
     --main-bg-color: #1B1C30;
     --white-text-color: #fff;
+    --grey-text-color: #E6E9FB;
     
 }
 
@@ -21,12 +22,18 @@ body, html{
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 90px auto 90px;
 }
+.header,.main,.sidebar{
+    padding-left: 4rem;
+}
 .header{
     grid-column: 2 / -1;
     background-color: var(--off-white-color);
 }
 .menu{
     grid-row: 1 / -1;
+}
+.menu ul li i{
+    color: var(--off-white-color);
 }
 
 .main{
@@ -43,11 +50,6 @@ body, html{
 
 }
 
-.footer{
-    grid-column: 2 / -1;
-    grid-row: 3 / -1;
-    background-color: yellow;
-}
 
 /* MENU STYLING */
 
@@ -70,7 +72,8 @@ body, html{
 }
 
 .menu ul li:nth-of-type(1){
-    padding:  0px 0px 0px 0px;
+    padding:  2rem 0;
+    border-bottom: 1px solid var(--grey-text-color);
 }
 
 .menu ul li:nth-of-type(9){
