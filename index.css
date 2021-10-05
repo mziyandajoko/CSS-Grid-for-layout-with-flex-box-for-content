@@ -9,6 +9,15 @@
     
 }
 
+/* UTILLITY CLASSES */
+
+.primary-button{
+    color: var(--white-text-color);
+    background-color: var(--primary-button-color);
+    padding: 1.2rem 3rem;
+    border: 0px;
+    border-radius: 5px;
+}
 
 body, html{
     background-color: var(--off-white-color);
@@ -163,6 +172,40 @@ body, html{
     background-color: var(--main-bg-color);
 }
 
+/* SIDE BAR STYLING */
+
 .sidebar{
     border-top-left-radius: 2rem;
+    padding: 2rem;
+}
+.sidebar-content--section{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-content--wrapper{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: 80px auto;
+    grid-gap: 8px;
+}
+.sidebar-content--fullWidth{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: 80px auto;
+    grid-gap: 8px;
+    margin-bottom: 8px;
+}
+
+.card{
+    color: var(--white-text-color);
+    background-color: var(--off-white-color);
+    padding: 1rem;
+    /* width: 150px; */
+}
+.dropdown-card{
+    color: var(--white-text-color);
+    background-color: var(--off-white-color);
+    padding: 1rem ;
+    /* width: 100px; */
 }
