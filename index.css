@@ -23,6 +23,7 @@ body, html{
     background-color: var(--off-white-color);
     height: 100%;
     color: var(--white-text-color);
+    margin: 0 auto;
 }
 
 .container {
