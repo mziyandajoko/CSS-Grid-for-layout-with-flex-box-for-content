@@ -27,18 +27,40 @@ body, html{
 }
 
 .container {
-    height: 100%;
     display: grid;
-    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
-    
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows:  repeat(4, auto);
+    grid-gap: 10px;
+    grid-template-areas: 
+    "menu header header header"
+    "menu main main sidebar";
+}
+
+.header{
+    grid-area: header;
+    background-color: red;
+}
+.menu{
+    grid-area: menu;
+    background-color: yellow;
+}
+.main{
+    grid-area: main;
+    background-color: green;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: orange;
 }
 .header,.sidebar{
     padding-left: 4rem;
 }
 
+
+
 /* SETTING UP GRID-LAYOUT */
 
-.header{
+/* .header{
     grid-column: 2 / -1;
     background-color: var(--off-white-color);
 }
@@ -61,12 +83,12 @@ body, html{
     grid-column: -1 /  -4;
     grid-row: 2 / -1;
 
-}
+} */
 
 
 /* MENU STYLING */
 
-.menu{
+/* .menu{
     display: flex;
     flex-direction: column;
     flex-basis: 200px;
@@ -91,17 +113,13 @@ body, html{
 .menu ul li:nth-of-type(9){
     flex-basis: 100px;
     padding:  20rem 0px 0px 0px;
-}
+} */
 
 
 /* MAIN CONTENT STYLING */
 
-.main{
 
-}
-.main-top--section{
-    /* display: grid; */
-    /* grid-template-columns: repeat(3, 1fr) / repeat(3, 1fr) ;  */
+/* .main-top--section{
     padding-bottom: 4rem;
     padding-left: 4rem;
     margin-bottom: 3rem;
@@ -112,7 +130,7 @@ body, html{
     display: flex;
     flex-direction: row;
     align-items: center;
-}
+} */
 
 .searchTab-items{
     background-color: var(--transparent-grey-color);
@@ -159,7 +177,7 @@ body, html{
     font-size: 1.3rem;
 }
 
-.summary-section{
+/* .summary-section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -171,10 +189,26 @@ body, html{
 
 .card-section{
     background-color: var(--main-bg-color);
-}
+} */
+
+
+/* MAIN BOTTOM BAR SECTION  STYLING */
+
+/* .menu-bottom--bar{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+/* .menu-bottom--bar ul li{
+    display: inline-block;
+    padding-right: 4rem;
+
+} */
 
 /* SIDE BAR STYLING */
-
+/* 
 .sidebar{
     border-top-left-radius: 2rem;
     padding: 2rem;
@@ -202,11 +236,13 @@ body, html{
     color: var(--white-text-color);
     background-color: var(--off-white-color);
     padding: 1rem;
-    /* width: 150px; */
+
 }
 .dropdown-card{
     color: var(--white-text-color);
     background-color: var(--off-white-color);
     padding: 1rem ;
-    /* width: 100px; */
-}
+} */
+
+
+
