@@ -26,11 +26,12 @@ body, html{
     margin: 0 auto;
 }
 
+/* SETTING UP GRID-LAYOUT */
 .container {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows:  repeat(4, auto);
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-template-areas: 
     "menu header header header"
     "menu main main sidebar";
@@ -38,11 +39,11 @@ body, html{
 
 .header{
     grid-area: header;
-    background-color: red;
 }
 .menu{
     grid-area: menu;
-    background-color: yellow;
+    background-color: var(--main-bg-color);
+    border-right: 1px solid var(--white-text-color);
 }
 .main{
     grid-area: main;
@@ -50,28 +51,29 @@ body, html{
 }
 .sidebar{
     grid-area: sidebar;
-    background-color: orange;
+    background-color: var(--main-bg-color);
 }
 .header,.sidebar{
     padding-left: 4rem;
 }
 
 
+/*  --------------------------------HEADER STYLING -------------------------------- */
 
-/* SETTING UP GRID-LAYOUT */
+.header{
+    display: flex;
 
-/* .header{
-    grid-column: 2 / -1;
     background-color: var(--off-white-color);
 }
+
 .menu{
-    grid-row: 1 / -1;
+    /* grid-row: 1 / -1; */
     background-color: var(--main-bg-color);
 }
 .menu ul li i{
     color: var(--white-text-color);
 }
-
+/*
 .main{
     background-color: var(--main-bg-color);
     grid-column: 2 / -4;
@@ -88,7 +90,7 @@ body, html{
 
 /* MENU STYLING */
 
-/* .menu{
+ .menu{
     display: flex;
     flex-direction: column;
     flex-basis: 200px;
@@ -113,7 +115,7 @@ body, html{
 .menu ul li:nth-of-type(9){
     flex-basis: 100px;
     padding:  20rem 0px 0px 0px;
-} */
+} 
 
 
 /* MAIN CONTENT STYLING */
@@ -208,11 +210,11 @@ body, html{
 } */
 
 /* SIDE BAR STYLING */
-/* 
 .sidebar{
     border-top-left-radius: 2rem;
     padding: 2rem;
 }
+/* 
 .sidebar-content--section{
     display: flex;
     flex-direction: column;
