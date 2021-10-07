@@ -36,6 +36,18 @@ body, html{
     "menu main main sidebar";
 }
 
+@media screen and (max-width: 998px){
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows:  repeat(4, auto);
+        grid-template-areas: 
+        "header header header header"
+        "menu menu menu menu"
+        "main main main main"
+        "sidebar sidebar sidebar sidebar";
+    }
+}
 .header{
     grid-area: header;
 }
@@ -57,13 +69,30 @@ body, html{
 }
 
 
-/*  --------------------------------HEADER STYLING -------------------------------- */
+/*  ================================================================= HEADER STYLING ======================================================================= */
 
 .header{
     display: flex;
 
     background-color: var(--off-white-color);
 }
+
+/*
+.main{
+    background-color: var(--main-bg-color);
+    grid-column: 2 / -4;
+    grid-row: 2 / -1;
+}
+
+.sidebar{
+    background-color:var(--main-bg-color);
+    grid-column: -1 /  -4;
+    grid-row: 2 / -1;
+    
+} */
+
+
+/* ================================================================= MENU STYLING ================================================================= */
 
 .menu{
     /* grid-row: 1 / -1; */
@@ -72,23 +101,6 @@ body, html{
 .menu ul li i{
     color: var(--white-text-color);
 }
-/*
-.main{
-    background-color: var(--main-bg-color);
-    grid-column: 2 / -4;
-       grid-row: 2 / -1;
-}
-
-.sidebar{
-    background-color:var(--main-bg-color);
-    grid-column: -1 /  -4;
-    grid-row: 2 / -1;
-
-} */
-
-
-/* MENU STYLING */
-
  .menu{
     display: flex;
     flex-direction: column;
@@ -116,8 +128,28 @@ body, html{
     padding:  20rem 0px 0px 0px;
 } 
 
+/*  ========================================================================= MENU MOBILE STYLING  ========================================================================= */
 
-/* MAIN CONTENT STYLING */
+@media screen and (max-width: 998px){
+    .menu{
+        flex-direction: row;
+    }
+    .menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu ul li {
+        flex-basis: 200px;
+    }
+    .menu ul li:nth-of-type(9){
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* ========================================================================= MAIN CONTENT STYLING ========================================================================= */
 
 
 .main-top--section{
@@ -131,7 +163,7 @@ body, html{
     display: flex;
     flex-direction: row;
     align-items: center;
-} */
+} 
 
 .searchTab-items{
     background-color: var(--transparent-grey-color);
@@ -193,7 +225,7 @@ body, html{
 } 
 
 
-/* MAIN BOTTOM BAR SECTION  STYLING */
+/* ================================================================= MAIN BOTTOM BAR SECTION  STYLING ================================================================= */
 
 /* .menu-bottom--bar{
     background-color: red;
