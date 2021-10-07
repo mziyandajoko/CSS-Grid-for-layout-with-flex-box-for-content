@@ -280,18 +280,23 @@ MAIN SUMMERY SECTION
 
 /* ================================================================= MAIN BOTTOM BAR SECTION  STYLING ================================================================= */
 
-/* .menu-bottom--bar{
-    background-color: red;
+.menu-bottom--bar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-} */
+    padding-left: 4rem;
+} 
 
-/* .menu-bottom--bar ul li{
+@media screen and (max-width: 998px){
+    .menu-bottom--bar{
+        padding-left: 2rem;
+    } 
+}
+ .menu-bottom--bar ul li{
     display: inline-block;
     padding-right: 4rem;
 
-} */
+} 
 
 /* SIDE BAR STYLING */
 .sidebar{
