@@ -31,7 +31,6 @@ body, html{
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows:  repeat(4, auto);
-    grid-gap: 5px;
     grid-template-areas: 
     "menu header header header"
     "menu main main sidebar";
@@ -47,7 +46,7 @@ body, html{
 }
 .main{
     grid-area: main;
-    background-color: green;
+    background-color:var(--main-bg-color);
 }
 .sidebar{
     grid-area: sidebar;
@@ -121,7 +120,7 @@ body, html{
 /* MAIN CONTENT STYLING */
 
 
-/* .main-top--section{
+.main-top--section{
     padding-bottom: 4rem;
     padding-left: 4rem;
     margin-bottom: 3rem;
@@ -179,7 +178,7 @@ body, html{
     font-size: 1.3rem;
 }
 
-/* .summary-section{
+ .summary-section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -191,7 +190,7 @@ body, html{
 
 .card-section{
     background-color: var(--main-bg-color);
-} */
+} 
 
 
 /* MAIN BOTTOM BAR SECTION  STYLING */
