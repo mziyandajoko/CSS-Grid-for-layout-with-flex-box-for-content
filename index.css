@@ -6,6 +6,7 @@
     --white-text-color: #fff;
     --grey-text-color: #E6E9FB;
     --transparent-grey-color: #434351;
+    --transparent-button-color: transparent;
 }
 
 /* UTILLITY CLASSES */
@@ -18,11 +19,32 @@
     border-radius: 5px;
 }
 
+.transparent-button{
+    color: var(--white-text-color);
+    background-color: var(--transparent-button-color);
+    padding: 1.2rem 1rem;
+    border: 1px solid var(--transparent-grey-color);
+    border-radius: 5px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    border: 0px;
+    background-color: var(--off-white-color);
+}
+
 body, html{
     background-color: var(--off-white-color);
     height: 100%;
     color: var(--white-text-color);
     margin: 0 auto;
+    font-family: sans-serif;
 }
 
 /* SETTING UP GRID-LAYOUT */
@@ -79,6 +101,7 @@ body, html{
 .header{
     display: flex;
     background-color: var(--off-white-color);
+    min-height: 100;
 }
 
 
@@ -222,6 +245,8 @@ body, html{
         padding-bottom: 4rem;
         padding: 2rem;
         margin-bottom: 3rem;
+        border-bottom-right-radius: 4rem;
+        border-bottom-left-radius: 4rem;
     }
 
     .searchTab{
@@ -278,7 +303,42 @@ MAIN SUMMERY SECTION
     }
 }
 
+
+/* ================================================================= CARD SECTION ================================================================= */
+
+.card-section{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 2rem;
+    flex-wrap: wrap;
+}
+
+.graph{
+    width: 600px;
+    background-color: var(--off-white-color);
+    height: 200px;
+
+}
+
+.card-section-box .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 0px;
+    height: 200px;
+    width: 170px;
+    background-color: var(--off-white-color);
+}
+
+
 /* ================================================================= MAIN BOTTOM BAR SECTION  STYLING ================================================================= */
+
+.menu-bottom--bar--header{
+    padding-left: 2rem;
+}
 
 .menu-bottom--bar{
     display: flex;
@@ -303,6 +363,13 @@ MAIN SUMMERY SECTION
     border-top-left-radius: 2rem;
     padding: 2rem;
 }
+
+@media screen and (max-width: 998px){
+    .sidebar{
+        border-top-left-radius: 0px;        
+    }
+}
+
 /* 
 .sidebar-content--section{
     display: flex;
