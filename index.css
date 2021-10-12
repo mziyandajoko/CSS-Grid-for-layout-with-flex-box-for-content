@@ -400,6 +400,17 @@ MAIN SUMMERY SECTION
     padding: 2rem;
     min-width: 400px;
 }
+.textarea >* .card{
+    min-width: 350px;
+    border-radius: 10px;
+}
+
+
+.sidebar-content--wrapper{  
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
 
 @media screen and (max-width: 998px){
     .sidebar{
