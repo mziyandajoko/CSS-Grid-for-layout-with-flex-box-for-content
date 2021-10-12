@@ -27,6 +27,14 @@
     border-radius: 5px;
 }
 
+.transparent-button--no-border{
+    color: var(--white-text-color);
+    background-color: var(--transparent-button-color);
+    padding: 1.2rem 1rem;
+    border: 0;
+    border-radius: 0;
+}
+
 .card{
     display: flex;
     flex-direction: column;
@@ -125,8 +133,9 @@ body, html{
  .menu{
     display: flex;
     flex-direction: column;
-    flex-basis: 200px;
+    /* flex-basis: 200px; */
     align-items: center;
+    min-width: 80px;
 }
 
 .menu ul{
@@ -308,31 +317,44 @@ MAIN SUMMERY SECTION
 
 .card-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-left: 2rem;
     flex-wrap: wrap;
+}
+
+.card-section--graph-top_section{
+    display: flex;
+    justify-content: space-between;
 }
 
 .graph{
     width: 600px;
     background-color: var(--off-white-color);
     height: 200px;
-
+    margin: 1rem 0;
 }
+.card-section-box--container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.card-section-box{
+    margin: 0 1rem;
+} 
 
 .card-section-box .card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 1rem;
     border-radius: 2rem;
     border: 0px;
     height: 200px;
-    width: 170px;
+    max-width: 150px;
     background-color: var(--off-white-color);
 }
-
 
 /* ================================================================= MAIN BOTTOM BAR SECTION  STYLING ================================================================= */
 
@@ -340,6 +362,20 @@ MAIN SUMMERY SECTION
     padding-left: 2rem;
 }
 
+.shield--container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    justify-content: space-around;
+    background-color: var(--off-white-color);
+    color: var(--white-text-color);
+    border: 0px;
+    border-radius: 10px;
+}
+.shield--container{
+    font-size: 20px;
+}
 .menu-bottom--bar{
     display: flex;
     flex-direction: row;
@@ -347,21 +383,22 @@ MAIN SUMMERY SECTION
     padding-left: 4rem;
 } 
 
+.menu-bottom--bar ul li{
+   display: inline-block;
+   padding-right: 4rem;
+
+} 
 @media screen and (max-width: 998px){
     .menu-bottom--bar{
         padding-left: 2rem;
     } 
 }
- .menu-bottom--bar ul li{
-    display: inline-block;
-    padding-right: 4rem;
-
-} 
 
 /* SIDE BAR STYLING */
 .sidebar{
     border-top-left-radius: 2rem;
     padding: 2rem;
+    min-width: 400px;
 }
 
 @media screen and (max-width: 998px){
